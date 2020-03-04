@@ -1,6 +1,6 @@
 module music163
 
-go 1.13
+go 1.14
 
 require (
 	github.com/gocolly/colly/v2 v2.0.1

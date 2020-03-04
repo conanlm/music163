@@ -100,7 +100,7 @@ import "music163/api"
 // }
 
 func main() {
-
+	api.Getmusic163("https://music.163.com/album?id=71880502")
 	api.Mygoroutinepool()
 
 }

@@ -11,7 +11,7 @@ import (
 )
 
 // Getmusic163 获取网易音乐歌曲地址
-func Getmusic163() {
+func Getmusic163(URL string) {
 	os.Truncate("网易.txt", 0)
 	os.Truncate("歌名.txt", 0)
 	c := colly.NewCollector()
@@ -46,11 +46,11 @@ func Getmusic163() {
 		fmt.Println("Visiting", r.URL.String())
 	})
 
-	c.Visit("https://music.163.com/album?id=71880502")
+	c.Visit(URL)
 
 }
 
-// Getsong 歌曲下载
+// Getsong 转换为歌曲下载URL
 func Getsong() (URLS []string, paths []string) {
 
 	// song := []string{}
